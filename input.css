@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply hidden;
+}
+
+body {
+  @apply text-white bg-[#1A1414] font-Montserrat overflow-x-hidden select-none;
+}
+
+#nav-bar {
+  @apply bg-[rgba(26,20,20,0.3)] lg:bg-transparent shadow-[0_8px_32px_0_rgba(133,71,33,0.369)] lg:shadow-none backdrop-blur-sm lg:backdrop-blur-none rounded-bl-[15px] lg:rounded-none rounded-br-[15px] border lg:border-none border-[rgba(255,255,255,0.18)] lg:border-transparent;
+}
+
+.signbtn:hover .user {
+  @apply bg-transparent;
+}
+
+.btn {
+  @apply text-lg font-semibold bg-[#FFD9A0] text-[#1A1414] duration-500 p-2 px-4 hover:bg-transparent hover:text-white rounded-3xl;
+}
+
+.hash-btn {
+  @apply text-lg font-semibold  text-white duration-500 p-1 px-4 hover:bg-white hover:text-[#1A1414] rounded-3xl;
+}
+
+.hash-dt-btn {
+  @apply bg-white text-[#1A1414];
+}
+
+@layer utilities {
+  .loader {
+    width: 60px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side, #fff 90%, #ffffff00);
+    background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+    background-size: calc(100% / 3) 50%;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+}
+
+.vid:hover .icon {
+  background: transparent;
+  color: white;
+}
+
+/* .hover-data {
+  @apply absolute top-3;
+} */
+
+/* .selleCard:hover {
+  @apply bg-white scale-[1.1] h-[50vh] -translate-y-10;
+}
+
+.selleCard:hover .hover-data {
+  @apply block;
+}
+
+.selleCard:hover .guitar-img {
+  @apply translate-x-20 translate-y-16 scale-[1.2];
+} */
+
+.swiper-pagination .swiper-pagination-bullet {
+  @apply bg-white w-2 h-2 mt-5;
+}
+
+footer li {
+  @apply text-lg md:text-sm font-medium cursor-pointer text-gray-400 duration-500 hover:translate-x-2 hover:text-white;
+}

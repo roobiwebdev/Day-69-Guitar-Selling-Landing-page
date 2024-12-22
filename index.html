@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+  />
+
+  <link href="./output.css" rel="stylesheet" />
+  <link
+      rel="shortcut icon"
+      href="assets/imgs/fav-icon.png"
+      type="image/x-icon"
+    />
+    <title>Music</title>
+  </head>
+  <body class="overflow-hidden">
+    <div
+      class="absolute z-30 w-full h-screen bg-[#3E3331]  loading-wrapper"
+    >
+      <div
+        class="z-10 h-screen w-full flex justify-center items-center fixed top-0"
+      >
+        <div class="loader"></div>
+      </div>
+    </div>
+    <header class=" overflow-x-hidden min-h-screen">
+      <div class="bg-img absolute w-full h-screen -z-10">
+        <img
+          src="assets/imgs/header.png"
+          alt=""
+          class="w-full h-screen object-cover"
+        />
+      </div>
+      <nav class="nav_data w-11/12 mx-auto pt-5 flex justify-between items-center">
+        <a href="home" class="lg:w-1/3"
+          ><h1
+            class="text-4xl font-Pacifico italic tracking-wide cursor-pointer md:text-5xl xl:text-6xl font-semibold"
+          >
+            Guitars
+          </h1></a
+        >
+
+        <div
+          class="absolute flex top-0 left-[-100%] flex-col justify-center items-center h-[65vh] w-full duration-500 lg:left-0 lg:flex-row xl:w-[67%] lg:relative lg:h-auto lg:bg-transparent z-10 lg:rounded-none lg:shadow-none lg:justify-between"
+          id="nav-bar"
+        >
+          <ul
+            class="flex flex-col gap-4 justify-center items-center text-center lg:flex-row lg:border lg:p-1 lg:rounded-[30px] lg:gap-1"
+          >
+            <li
+              class="nav-link cursor-pointer text-xl font-medium p-1 px-5 rounded-3xl duration-500 hover:bg-[#FFFFFF] hover:text-black"
+            >
+              Home
+            </li>
+            <li
+              class="nav-link cursor-pointer text-xl font-medium p-1 px-5 rounded-3xl duration-500 hover:bg-[#FFFFFF] hover:text-black"
+            >
+              Sales
+            </li>
+            <li
+              class="nav-link cursor-pointer text-xl font-medium p-1 px-5 rounded-3xl duration-500 hover:bg-[#FFFFFF] hover:text-black"
+            >
+              Store
+            </li>
+            <li
+              class="nav-link cursor-pointer text-xl font-medium p-1 px-5 rounded-3xl duration-500 hover:bg-[#FFFFFF] hover:text-black"
+            >
+              Blog
+            </li>
+            <li
+              class="nav-link cursor-pointer text-xl font-medium p-1 px-5 rounded-3xl duration-500 hover:bg-[#FFFFFF] hover:text-black"
+            >
+              Contact
+            </li>
+          </ul>
+
+          <div
+            class="w-full flex justify-center gap-x-3 items-center mt-8 lg:mt-0 lg:justify-end lg:items-end"
+          >
+            <button
+              class="p-2 pl-5 pr-2 rounded-[30px] text-xl font-semibold flex gap-3 justify-center items-center text-[#3E3331] duration-500 bg-white hover:bg-transparent hover:text-white signbtn nav-link"
+            >
+              Sign Up
+              <span
+                class="h-9 w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+              >
+                <i class="ri-user-line text-xl"></i>
+              </span>
+            </button>
+
+            <button
+              class="border text-xl font-semibold h-12 w-12 rounded-full text-white hover:bg-white hover:text-[#3E3331] duration-300 nav-link"
+            >
+              <i class="ri-shopping-cart-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="text-4xl font-extralight cursor-pointer z-10 duration-500 hover:transform hover:scale-[1.1] lg:hidden"
+        >
+          <i class="ri-menu-4-line" id="nav-menu"></i>
+        </div>
+      </nav>
+
+      <div class="w-11/12 mx-auto mt-8 sm:mt-24 lg:flex lg:justify-between">
+        <div class="left_data text-center lg:text-start lg:w-1/3">
+          <h1
+            class="text-4xl font-medium my-5 lg:mt-0 md:text-4xl lg:text-5xl xl:text-6xl md:font-bold"
+          >
+            Harmony of Craftsmanship and Melody
+          </h1>
+
+          <p
+            class="font-normal leading-5 mb-5 lg:leading-7 lg:text-lg lg:font-medium lg:mt-28 lg:mb-7"
+          >
+            Whether you're a seasoned musician or just starting your musical
+            journey, we have everything you need to unleash your creativity and
+            express yourself through music.
+          </p>
+
+          <button class="btn">Explore More</button>
+        </div>
+
+        <div class="right_data mt-5 sm:mt-10 lg:mt-0 lg:w-1/3">
+          <div
+            class="w-full flex flex-wrap justify-center gap-x-1 gap-y-3 items-center lg:mt-6 lg:w-9/12 lg:mx-auto"
+          >
+            <button class="hash-btn hash-dt-btn">#steel</button>
+            <button class="hash-btn">#vintage</button>
+            <button class="hash-btn">#leather</button>
+            <button class="hash-btn">#print</button>
+            <button class="hash-btn">#wooden</button>
+            <button class="hash-btn">#pattern</button>
+          </div>
+
+          <div
+            class="max-w-[28rem] sm:max-w-10/12 lg:max-w-[20rem] mx-auto p-2 border rounded-xl mt-5 cursor-pointer bg-[rgba(26,20,20,0.3)] shadow-[0_0px_2px_0_rgba(133,71,33,0.369)] backdrop-blur-sm border-[rgba(255,255,255,0.18)] duration-500 hover:shadow-[0_8px_32px_0_rgba(133,71,33,0.369)] hover:-translate-y-7 sm:mt-10"
+          >
+            <div class="w-full rounded-xl">
+              <img
+                src="assets/imgs/hlips.jpeg"
+                alt=""
+                class="rounded-xl object-cover"
+              />
+            </div>
+
+            <div class="flex justify-between items-center mt-5">
+              <div class="font-medium space-y-1">
+                <h2>H1ps Limited Edition Guitar</h2>
+                <p>$340</p>
+              </div>
+
+              <button
+                class="border text-2xl font-semibold h-12 w-12 rounded-full text-white hover:bg-white hover:text-[#3E3331] duration-300"
+              >
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mt-28 w-11/12 flex flex-col gap-10 mx-auto">
+      <section class="min-h-screen">
+        <div
+          class="left_sec w-full flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:gap-10"
+        >
+          <div
+            class="w-full rounded-xl cursor-pointer max-w-[28rem] border sm:max-w-10/12 lg:max-w-[28rem] lg:h-[28rem]"
+          >
+            <img
+              src="assets/imgs/piano.jpg"
+              alt=""
+              class="rounded-xl object-cover h-full"
+            />
+          </div>
+
+          <div class="mt-10 lg:w-[55%]">
+            <p class="text-start">about us</p>
+            <h1
+              class="text-4xl text-center font-medium my-2 lg:text-start lg:text-6xl"
+            >
+              We Are The Best Guitars Store in Town
+            </h1>
+
+            <div
+              class="flex flex-col w-full justify-between items-start lg:flex-row lg:mt-12 lg:gap-10"
+            >
+              <div
+                class="w-full flex flex-col justify-center items-center lg:justify-start lg:items-start lg:w-[30%]"
+              >
+                <p class="text-center lg:text-start font-semibold my-5 lg:mt-0">
+                  Would you like to take a look at our products?
+                </p>
+                <button class="btn my-5">Open Store</button>
+              </div>
+
+              <p
+                class="text-center leading-7 font-medium lg:text-start lg:w-[70%]"
+              >
+                At Guitar, we believe that music has the power to inspire,
+                connect, and transform lives. Whether you're a seasoned
+                performer, a budding artist, or simply someone who appreciates
+                the beauty of music, we're here to support your musical journey
+                every step of the way.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bottom_sec mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 justify-center items-center lg:mt-24"
+        >
+          <div
+            class="bg-[#2A201F] flex gap-5 justify-center items-center rounded-xl min-w-80 px-5 py-3 cursor-pointer duration-500 hover:-translate-y-7"
+          >
+            <img src="assets/imgs/fast ship.png" alt="" class="w-28 h-28" />
+            <div>
+              <h1 class="font-bold">Fast Shipping</h1>
+              <p class="text-[#868080]">order over $1,000.00</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#2A201F] flex gap-5 justify-center items-center rounded-xl min-w-80 px-5 py-3 cursor-pointer duration-500 hover:-translate-y-7"
+          >
+            <img src="assets/imgs/big cash.png" alt="" class="w-28 h-28" />
+            <div>
+              <h1 class="font-bold">Big Cashing</h1>
+              <p class="text-[#868080]">order over $1,000.00</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#2A201F] flex gap-10 justify-center items-center rounded-xl min-w-80 px-5 py-3 cursor-pointer duration-500 hover:-translate-y-7"
+          >
+            <img src="assets/imgs/quick.png" alt="" class="w-28 h-28" />
+            <div>
+              <h1 class="font-bold">Quick Payment</h1>
+              <p class="text-[#868080]">order over $1,000.00</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#2A201F] flex gap-5 justify-center items-center rounded-xl min-w-80 px-5 py-3 cursor-pointer duration-500 hover:-translate-y-7"
+          >
+            <img src="assets/imgs/call24.png" alt="" class="w-28 h-28" />
+            <div>
+              <h1 class="font-bold">24/7 Support</h1>
+              <p class="text-[#868080]">Ready for you</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="mt-12 md:mt-32 min-h-screen flex flex-col gap-6 justify-center items-center"
+      >
+        <div
+          class="w-full flex flex-col justify-between items-center md:flex-row"
+        >
+          <div class="left_sec md:w-1/2">
+            <p>offers</p>
+            <h1
+              class="text-4xl text-center font-medium my-2 md:text-start lg:text-6xl lg:w-10/12"
+            >
+              An In-Depth Electric Guitar Performance Like:-
+            </h1>
+          </div>
+
+          <div
+            class="right_sec mt-12 w-11/12 mx-auto flex justify-center items-center cursor-pointer rounded-2xl vid md:w-[40%] lg:h-52 relative"
+            id="videoThumb"
+          >
+            <video
+              poster="assets/imgs/in addition video thumb.jpg"
+              class="rounded-2xl object-cover scale-[1.1]"
+              id="video"
+            >
+              <source
+                src="assets/videos/guitar playing -1.webm"
+                type="video/webm"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <div
+              class="w-12 h-12 border rounded-full absolute flex justify-center items-center text-2xl font-semibold cursor-pointer duration-300 text-[#1A1414] bg-white icon"
+              id="controller"
+            >
+              <i class="ri-play-fill" id="controlVideoIcon"></i>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bottom_sec mt-24 grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        >
+          <div class="rounded-2xl cursor-pointer relative bg-[#2A201F]">
+            <div class="rounded-2xl h-64 md:h-80">
+              <img
+                src="assets/imgs/do u want.jpg"
+                alt=""
+                class="object-cover rounded-xl w-full h-full"
+              />
+            </div>
+
+            <div
+              class="absolute top-0 flex flex-col justify-between h-full w-full p-3 md:p-5"
+            >
+              <h1 class="text-2xl font-medium w-10/12 sm:text-3xl">
+                Do you want an individual guitar?
+              </h1>
+
+              <div class="self-end">
+                <button
+                  class="p-1 pl-3 pr-2 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-lg lg:text-xl font-semibold flex gap-3 justify-center items-center text-[#3E3331] duration-500 bg-white hover:bg-transparent hover:text-white signbtn"
+                >
+                  Explore More
+                  <span
+                    class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+                  >
+                    <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl cursor-pointer relative bg-[#2A201F]">
+            <div class="rounded-2xl h-64 md:h-80">
+              <img
+                src="assets/imgs/exclusive.png"
+                alt=""
+                class="object-cover rounded-xl w-full h-full"
+              />
+            </div>
+
+            <div
+              class="absolute top-0 flex flex-col justify-between h-full w-full p-3 md:p-5"
+            >
+              <h1 class="text-2xl font-medium w-10/12 sm:text-3xl">
+                Exclusive Guitars
+              </h1>
+
+              <div class="self-end">
+                <button
+                  class="p-1 pl-3 pr-2 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-lg lg:text-xl font-semibold flex gap-3 justify-center items-center text-[#3E3331] duration-500 bg-white hover:bg-transparent hover:text-white signbtn"
+                >
+                  Explore More
+                  <span
+                    class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+                  >
+                    <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl cursor-pointer relative bg-[#2A201F]">
+            <div class="rounded-2xl h-64 md:h-80">
+              <img
+                src="assets/imgs/individual.jpg"
+                alt=""
+                class="object-cover rounded-xl w-full h-full"
+              />
+            </div>
+
+            <div
+              class="absolute top-0 flex flex-col justify-between h-full w-full p-3 md:p-5"
+            >
+              <h1 class="text-2xl font-medium w-10/12 sm:text-3xl">
+                Do you want an individual guitar?
+              </h1>
+
+              <div class="self-end">
+                <button
+                  class="p-1 pl-3 pr-2 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-lg lg:text-xl font-semibold flex gap-3 justify-center items-center text-[#3E3331] duration-500 bg-white hover:bg-transparent hover:text-white signbtn"
+                >
+                  Explore More
+                  <span
+                    class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+                  >
+                    <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12 scale_data">
+        <div class="">
+          <p>best sellers</p>
+          <h1
+            class="text-3xl my-2 font-semibold text-center lg:text-5xl lg:w-[45%] lg:text-start"
+          >
+            Ready to find your perfect guitar?
+          </h1>
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper py-10 pb-14 cursor-grab">
+            <div class="swiper-slide">
+              <div
+                class="bg-[#2A201F] rounded-xl p-5 relative cursor-pointer duration-500"
+              >
+                <div>
+                  <img src="assets/imgs/base.png" alt="" class="guitar-img" />
+                </div>
+
+                <!-- <div class="hover-data">
+      <h1 class="text-2xl text-[#3E3331] font-medium">
+        Transparent Jbanez
+      </h1>
+      <p class="text-xl font-medium text-[#878787]">Limited Edition</p>
+
+      <h3 class="text-2xl text-[#3E3331] font-semibold my-4">
+        $5,400.00
+      </h3>
+      <button
+        class="p-2 pr-1 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-xl font-semibold flex gap-3 justify-center items-center text-white duration-500 bg-[#3E3331] hover:bg-white hover:text-white signbtn"
+      >
+        View Details
+        <span
+          class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+        >
+          <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+        </span>
+      </button>
+    </div> -->
+
+                <div class="default-data">
+                  <button
+                    class="absolute top-5 right-5 border text-xl font-semibold h-12 w-12 rounded-full text-white hover:bg-white hover:text-[#3E3331] duration-300 nav-link"
+                  >
+                    <i class="ri-shopping-cart-line"></i>
+                  </button>
+
+                  <div>
+                    <h2 class="font-medium">Jbanez Limited Edition</h2>
+                    <p class="mt-2">$5,400.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="bg-[#2A201F] rounded-xl p-5 relative cursor-pointer duration-500"
+              >
+                <div>
+                  <img src="assets/imgs/base.png" alt="" class="guitar-img" />
+                </div>
+
+                <!-- <div class="hover-data">
+          <h1 class="text-2xl text-[#3E3331] font-medium">
+            Transparent Jbanez
+          </h1>
+          <p class="text-xl font-medium text-[#878787]">Limited Edition</p>
+
+          <h3 class="text-2xl text-[#3E3331] font-semibold my-4">
+            $5,400.00
+          </h3>
+          <button
+            class="p-2 pr-1 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-xl font-semibold flex gap-3 justify-center items-center text-white duration-500 bg-[#3E3331] hover:bg-white hover:text-white signbtn"
+          >
+            View Details
+            <span
+              class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+            >
+              <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+            </span>
+          </button>
+        </div> -->
+
+                <div class="default-data">
+                  <button
+                    class="absolute top-5 right-5 border text-xl font-semibold h-12 w-12 rounded-full text-white hover:bg-white hover:text-[#3E3331] duration-300 nav-link"
+                  >
+                    <i class="ri-shopping-cart-line"></i>
+                  </button>
+
+                  <div>
+                    <h2 class="font-medium">Jbanez Limited Edition</h2>
+                    <p class="mt-2">$5,400.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="bg-[#2A201F] rounded-xl p-5 relative cursor-pointer duration-500"
+              >
+                <div>
+                  <img
+                    src="assets/imgs/fander-1.png"
+                    alt=""
+                    class="guitar-img"
+                  />
+                </div>
+
+                <!-- <div class="hover-data">
+              <h1 class="text-2xl text-[#3E3331] font-medium">
+                Transparent Jbanez
+              </h1>
+              <p class="text-xl font-medium text-[#878787]">Limited Edition</p>
+
+              <h3 class="text-2xl text-[#3E3331] font-semibold my-4">
+                $5,400.00
+              </h3>
+              <button
+                class="p-2 pr-1 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-xl font-semibold flex gap-3 justify-center items-center text-white duration-500 bg-[#3E3331] hover:bg-white hover:text-white signbtn"
+              >
+                View Details
+                <span
+                  class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+                >
+                  <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+                </span>
+              </button>
+            </div> -->
+
+                <div class="default-data">
+                  <button
+                    class="absolute top-5 right-5 border text-xl font-semibold h-12 w-12 rounded-full text-white hover:bg-white hover:text-[#3E3331] duration-300 nav-link"
+                  >
+                    <i class="ri-shopping-cart-line"></i>
+                  </button>
+
+                  <div>
+                    <h2 class="font-medium">Jbanez Limited Edition</h2>
+                    <p class="mt-2">$5,400.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="bg-[#2A201F] rounded-xl p-5 relative cursor-pointer duration-500"
+              >
+                <div>
+                  <img
+                    src="assets/imgs/fander_blue.png"
+                    alt=""
+                    class="guitar-img"
+                  />
+                </div>
+
+                <!-- <div class="hover-data">
+            <h1 class="text-2xl text-[#3E3331] font-medium">
+              Transparent Jbanez
+            </h1>
+            <p class="text-xl font-medium text-[#878787]">Limited Edition</p>
+
+            <h3 class="text-2xl text-[#3E3331] font-semibold my-4">
+              $5,400.00
+            </h3>
+            <button
+              class="p-2 pr-1 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-xl font-semibold flex gap-3 justify-center items-center text-white duration-500 bg-[#3E3331] hover:bg-white hover:text-white signbtn"
+            >
+              View Details
+              <span
+                class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+              >
+                <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+              </span>
+            </button>
+          </div> -->
+
+                <div class="default-data">
+                  <button
+                    class="absolute top-5 right-5 border text-xl font-semibold h-12 w-12 rounded-full text-white hover:bg-white hover:text-[#3E3331] duration-300 nav-link"
+                  >
+                    <i class="ri-shopping-cart-line"></i>
+                  </button>
+
+                  <div>
+                    <h2 class="font-medium">Jbanez Limited Edition</h2>
+                    <p class="mt-2">$5,400.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="bg-[#2A201F] rounded-xl p-5 relative cursor-pointer duration-500"
+              >
+                <div>
+                  <img src="assets/imgs/base.png" alt="" class="guitar-img" />
+                </div>
+
+                <!-- <div class="hover-data">
+      <h1 class="text-2xl text-[#3E3331] font-medium">
+        Transparent Jbanez
+      </h1>
+      <p class="text-xl font-medium text-[#878787]">Limited Edition</p>
+
+      <h3 class="text-2xl text-[#3E3331] font-semibold my-4">
+        $5,400.00
+      </h3>
+      <button
+        class="p-2 pr-1 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-xl font-semibold flex gap-3 justify-center items-center text-white duration-500 bg-[#3E3331] hover:bg-white hover:text-white signbtn"
+      >
+        View Details
+        <span
+          class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+        >
+          <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+        </span>
+      </button>
+    </div> -->
+
+                <div class="default-data">
+                  <button
+                    class="absolute top-5 right-5 border text-xl font-semibold h-12 w-12 rounded-full text-white hover:bg-white hover:text-[#3E3331] duration-300 nav-link"
+                  >
+                    <i class="ri-shopping-cart-line"></i>
+                  </button>
+
+                  <div>
+                    <h2 class="font-medium">Jbanez Limited Edition</h2>
+                    <p class="mt-2">$5,400.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="bg-[#2A201F] rounded-xl p-5 relative cursor-pointer duration-500"
+              >
+                <div>
+                  <img
+                    src="assets/imgs/fander-1.png"
+                    alt=""
+                    class="guitar-img"
+                  />
+                </div>
+
+                <!-- <div class="hover-data">
+              <h1 class="text-2xl text-[#3E3331] font-medium">
+                Transparent Jbanez
+              </h1>
+              <p class="text-xl font-medium text-[#878787]">Limited Edition</p>
+
+              <h3 class="text-2xl text-[#3E3331] font-semibold my-4">
+                $5,400.00
+              </h3>
+              <button
+                class="p-2 pr-1 w-48 md:w-auto md:p-2 md:pl-5 md:pr-2 rounded-[30px] text-xl font-semibold flex gap-3 justify-center items-center text-white duration-500 bg-[#3E3331] hover:bg-white hover:text-white signbtn"
+              >
+                View Details
+                <span
+                  class="h-7 w-7 md:h-9 md:w-9 flex justify-center items-center rounded-full bg-black text-white duration-300 user"
+                >
+                  <i class="ri-arrow-right-line text-lg md:text-xl"></i>
+                </span>
+              </button>
+            </div> -->
+
+                <div class="default-data">
+                  <button
+                    class="absolute top-5 right-5 border text-xl font-semibold h-12 w-12 rounded-full text-white hover:bg-white hover:text-[#3E3331] duration-300 nav-link"
+                  >
+                    <i class="ri-shopping-cart-line"></i>
+                  </button>
+
+                  <div>
+                    <h2 class="font-medium">Jbanez Limited Edition</h2>
+                    <p class="mt-2">$5,400.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section
+        class="right_data mt-12 text-center w-full md:flex md:justify-between md:items-center md:text-start"
+      >
+        <h1 class="text-3xl my-5 font-semibold md:w-[30%] lg:text-5xl">
+          Sign Up To Our Newsletter
+        </h1>
+
+        <div class="md:w-1/3">
+          <p class="my-5 font-medium md:text-center">
+            California Residents, please see our Notice of Financial Incentive
+            for more information
+          </p>
+
+          <div class="flex flex-col gap-5">
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="w-full p-2 pl-4 text-lg bg-transparent border border-[#3E3331] text-white font-semibold outline-none rounded-3xl"
+            />
+            <button
+              class="p-2 text-xl rounded-3xl font-semibold w-full text-[#3E3331] duration-500 bg-white hover:bg-transparent hover:text-white signbtn nav-link"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="mt-5 w-full flex flex-col justify-center items-center md:w-1/3"
+        >
+          <img src="assets/imgs/footer guitar player.png" alt="" />
+        </div>
+      </section>
+    </main>
+
+    <footer class="left_data bg-[#040000] -mt-5 z-20 px-5 md:px-16 text-center pt-10 md:text-start">
+      <div class="w-full flex flex-wrap justify-between items-center flex-col md:flex-row md:items-start">
+        <div class="">
+          <a href="home" class="lg:w-1/3"
+            ><h1
+              class="text-4xl font-Pacifico italic tracking-wide cursor-pointer md:text-5xl font-semibold"
+            >
+              Guitars
+            </h1></a
+          >
+
+          <p class="text-lg font-medium my-5">
+            15523 Sirena Well, Leschport, MA 11862-4746
+          </p>
+
+          <p class="my-3">info@guitaro.com</p>
+
+          
+        </div>
+
+        <div class="my-5">
+          <h1 class="text-xl font-semibold mb-5">Useful Links</h1>
+
+          <ul class="flex jusce flex-col gap-3">
+            <li>Home</li>
+            <li>Blog</li>
+            <li>Store</li>
+            <li>Sale</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+        <div  class="my-5">
+          <h1 class="text-xl font-semibold mb-5">Contact Information</h1>
+
+          <ul  class="flex flex-col gap-3">
+            <li>+12 3 4567 8900</li>
+
+            <li>+12 3 4567 8901</li>
+            <li>Monday–Friday: 8AM - 5PM</li>
+            <li>Saturday–Sunday: 10AM - 2PM</li>
+          </ul>
+        </div>
+
+        <div  class="my-5">
+          <h class="text-xl font-semibold mb-5">Customer Service</h1>
+
+          <ul  class="flex flex-col gap-3">
+            <li>Orders</li>
+            <li>Cart</li>
+            <li>Wishlist</li>
+            <li>Account</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="py-3 md:py-5 border-t text-center md:mt-5">
+        <p>Copyright <a href="https://t.me/DevNerd0" target="_blank" class="font-bold">©DevNerd</a> .. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
