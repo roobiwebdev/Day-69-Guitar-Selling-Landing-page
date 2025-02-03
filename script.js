@@ -110,7 +110,7 @@ if (window.innerWidth >= 760) {
   sr.reveal(".right_data", { distance: "300px", origin: "right", delay: 900 });
   sr.reveal(".left_sec", { distance: "300px", origin: "left" });
   sr.reveal(".right_sec", { distance: "300px", origin: "right" });
-  sr.reveal(".bottom_sec", { distance: "300px", origin: "bottom" });
+  sr.reveal(".bottom_sec", { distance: "200px", origin: "bottom" });
 }
 
 if(window.innerWidth >=760){
